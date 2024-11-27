@@ -64,7 +64,7 @@
         <input type="email" name="email" placeholder="Correo Electrónico" required>
         <input type="password" name="password" placeholder="Contraseña" required>
         <input type="password" name="password_confirmation" placeholder="Confirmar Contraseña" required>
-        <a href="{{ route('confirmacorreo') }}">Registrarse</a>
+        <a href="{{ route('confirmacioncorreo') }}">Registrarse</a>
     </form>
     <a href="{{ route('iniciar_sesion') }}">¿Ya tienes una cuenta? Ingresa aquí</a>
 </div>

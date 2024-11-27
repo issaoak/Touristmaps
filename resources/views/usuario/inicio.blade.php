@@ -9,7 +9,7 @@
     
     <div class="d-flex justify-content-start mt-4"> <!-- Cambiado a justify-content-start para alinear los botones a la izquierda -->
         <a href="{{ route('busqueda_hoteles') }}" class="btn btn-primary mx-2">Búsqueda de Hoteles</a>
-        <a href="{{ route('buscar') }}" class="btn btn-secondary mx-2">Búsqueda de vuelos</a>
+        <a href="{{ route('busqueda_vuelo') }}" class="btn btn-secondary mx-2">Búsqueda de vuelos</a>
     </div>
 
     <div class="search-bar mt-4">

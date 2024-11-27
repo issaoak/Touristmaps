@@ -1,6 +1,6 @@
 <!-- resources/views/historialReservaciones.blade.php NUEVO
  -->
-@extends('layouts.plantilla1')
+@extends('layouts.plantilla')
 
 @section('titulo', 'Historial de Reservaciones')
 

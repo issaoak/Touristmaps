@@ -58,24 +58,16 @@
 
 <div class="login-container">
     <h2>Bienvenido de nuevo</h2>
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    <form action="{{ route('iniciar_sesion.submit') }}" method="POST">
-        @csrf
+    <form>
         <label>Correo Electrónico:</label>
-        <input type="email" name="email" placeholder="Correo Electrónico" required>
+        <input type="email" placeholder="Correo Electrónico">
         <label>Contraseña:</label>
-        <input type="password" name="password" placeholder="Contraseña" required>
-        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+        <input type="password" placeholder="Contraseña">
+        <a href="{{ route('perfil') }}" class="btn btn-primary">Iniciar sesión</a>
     </form>
     <a href="{{ route('registro') }}">¿Aún no tienes cuenta? Regístrate aquí</a>
+    <a href="{{ route('recuperar_contrasena') }}">¿Olvidaste tu contraseña? Recupérala aquí</a>
+
 </div>
 
 @endsection

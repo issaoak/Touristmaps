@@ -10,15 +10,12 @@
         <p>Escriba el código que enviamos a ********42</p>
         <input type="text" placeholder="Código de verificación">
         <button class="btn-recover">Recuperar</button>
-        <a href="{{ route('confirmacorreo') }}" class="link">Prueba con tu Correo electrónico</a>
+        <a href="{{ route('confirmacioncorreo') }}" class="link">Prueba con tu Correo electrónico</a>
     </div>
 
     <style>
         /* Estilos específicos de esta página */
-        body {
-            background-color: #f7f7f7;
-            font-family: Arial, sans-serif;
-        }
+    
         .container {
             text-align: center;
             background-color: white;
