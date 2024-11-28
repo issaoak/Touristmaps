@@ -20,7 +20,8 @@ Route::view('/buscar', 'usuario.buscar')->name('buscar');
 Route::view('/carrito', 'usuario.carrito')->name('carrito');
 
 Route::view('/reserva_pagar', 'usuario.reserva_pagar')->name('reserva_pagar');
-Route::view('/confirpagohotel', 'usuario.confirmar_pago_hotel')->name('confirmar_pago_hotel');
+Route::view('/confirmar_pago_hotel', 'usuario.confirmar_pago_hotel')->name('confirmar_pago_hotel');
+
 Route::view('/busqueda_vuelo', 'usuario.busqueda_vuelo')->name('busqueda_vuelo');
 Route::view('/perfil', 'usuario.perfil')->name('perfil');
 Route::view('/hoteles', 'usuario.hoteles')->name('hoteles');
@@ -32,6 +33,12 @@ Route::view('/historialReservaciones', 'usuario.historialReservaciones')->name('
 Route::view('/confirmacioncorreo', 'usuario.confirmacioncorreo')->name('confirmacioncorreo');
 Route::view('/confirmaciontelefono', 'usuario.confirmaciontelefono')->name('confirmaciontelefono');
 Route::view('/recuperar_contrasena', 'usuario.recuperar_contrasena')->name('recuperar_contrasena');
+Route::view('/informacion_hoteles', 'usuario.informacion_hoteles')->name('informacion_hoteles');
+Route::view('/carrito', 'usuario.carrito')->name('carrito');
+Route::view('/reservaciones', 'usuario.reservaciones')->name('reservaciones');
+Route::view('/pago', 'usuario.pago')->name('pago');
+
+
 
 
 

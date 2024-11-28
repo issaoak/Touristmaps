@@ -11,8 +11,18 @@
             <span class="edit-icon-name">✎</span>
         </h1>
         <p>Entusiasta viajero y explorador que ha dedicado gran parte de su vida a descubrir nuevas culturas y destinos alrededor del mundo...</p>
-        <a href="{{ route('historialReservaciones') }}" class="btn btn-primary history-button">Historial de Reservación</a>
-        <button>Cerrar Sesión</button> <!-- Botón simplificado sin funcionalidad -->
+
+        <!-- Botón que dirige al historial de reservaciones -->
+        <a href="{{ route('historialReservaciones') }}" class="btn btn-primary history-button">Historial de Reservaciónes Anteriores</a>
+
+        <!-- Botón que dirige a la página de reservaciones -->
+        <a href="{{ route('reservaciones') }}" class="btn btn-success mt-3">Ir a Reservaciones</a>
+
+        <!-- Botón para cerrar sesión -->
+        <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+            @csrf
+            <button type="submit" class="btn btn-danger mt-3">Cerrar Sesión</button>
+        </form>
     </div>
 </div>
 @endsection

@@ -16,8 +16,8 @@
                     <p class="card-text">Dirección</p>
                     <p class="card-text"><strong>$400 la noche</strong></p>
                     <p class="card-text">Check in: 15:00</p>
-                    <a href="{{ route('reserva_pagar') }}" class="btn btn-info btn-sm mb-2">Más información</a>
-                    <form action="{{ route('confirmar_pago_hotel') }}" method="GET">
+                    <a href="{{ route('informacion_hoteles') }}" class="btn btn-info btn-sm mb-2">Más información</a>
+                    <form action="{{ route('pago') }}" method="GET">
                         <button type="submit" class="btn btn-primary">Ir a Confirmación</button>
                     </form>
                 </div>
