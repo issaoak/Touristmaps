@@ -1,41 +1,16 @@
-@extends('layout.plantilla')
+@extends('layouts.plantilla')
 
 @section('titulo', 'Editar Habitación de Hotel')
 
 @section('contenido')
-    <div class="navbar">
-        <div class="navbar-left">
-            <a href="{{ route('inicio') }}">
-                <img src="{{ asset('images/Logo.webp') }}" alt="Logo">
-            </a>
-            <p class="welcome-text">Tourist Without Maps</p>
-        </div>
-        <div class="navbar-right">
-            @if (Auth::check())
-                @if (Auth::user()->role === 'admin')
-                    <a href="{{ route('admin.dashboard') }}">
-                        <img src="{{ asset('images/Perfil.jpg') }}" alt="Perfil Admin" style="width: 60px; height: 60px;">
-                    </a>
-                @else
-                    <a href="{{ route('perfil.mostrar') }}">
-                        <img src="{{ asset('images/Perfil.jpg') }}" alt="Perfil Usuario" style="width: 60px; height: 60px;">
-                    </a>
-                @endif
-            @else
-                <a href="{{ route('iniciar_sesion') }}" class="btn btn-outline-dark" style="margin-left: 15px;">Iniciar Sesión / Registrarse</a>
-            @endif
-            <img src="{{ asset('images/Carrito.png') }}" alt="Carrito" class="cart-icon" style="width: 60px; height: 60px; margin-left: 15px;">
-        </div>
-    </div>
-
-    <!-- Contenedor principal -->
+ 
     <div class="main-container">
         <div class="search-bar">
             <input type="text" placeholder="Buscar...">
         </div>
 
         <div class="room-container">
-            <form action="{{ route('habitacion.actualizar') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.habitacionadmin') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="room-image">
@@ -68,7 +43,7 @@
                         <input type="date" id="disponibilidad" name="disponibilidad" class="form-control" value="{{ old('disponibilidad') }}" style="width: 50%;">
                     </div>
                     <div class="update-button mt-4">
-                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
                     </div>
                 </div>
             </form>

@@ -6,11 +6,14 @@ use Illuminate\Support\Facades\Route;
 // Rutas para Admin
 Route::view('/admin/configuraciones', 'admin.configuraciones')->name('admin.configuraciones');
 Route::view('/admin/dashboard', 'admin.dashboard')->name('admin.dashboard');
-Route::view('/admin/habitacion', 'admin.habitacionadmin')->name('admin.habitacionadmin');
-Route::view('/admin/habitaciones', 'admin.habitaciones')->name('admin.habitaciones');
 Route::view('/admin/reportes', 'admin.reportes')->name('admin.reportes');
 Route::view('/admin/usuarios', 'admin.usuarios')->name('admin.usuarios');
 Route::view('/admin/vuelos', 'admin.vuelos')->name('admin.vuelos');
+
+Route::view('/admin/hoteles', 'admin.hoteles')->name('admin.hoteles');
+Route::view('/admin/habitaciones', 'admin.habitaciones')->name('admin.habitaciones');
+Route::view('/admin/habitacionadmin', 'admin.habitacionadmin')->name('admin.habitacionadmin');
+
 
 // Rutas para Usuario
 Route::view('/busqueda_hoteles', 'usuario.busqueda_hoteles')->name('busqueda_hoteles');

@@ -1,5 +1,5 @@
 <!-- resources/views/inicioadmin.blade.php NUEVO-->
-@extends('layouts.plantilla1')
+@extends('layouts.plantilla')
 
 @section('titulo', 'Vista Admin - Inicio')
 
@@ -8,9 +8,7 @@
     <h1 class="text-center mb-4">Inicio</h1>
     
     <!-- Botón de referencia "Admin" -->
-    <div class="text-end mb-3">
-        <button class="btn btn-secondary" disabled>Admin</button>
-    </div>
+
 
     <!-- Primer Elemento de la Reservación -->
     <div class="d-flex border p-3 mb-3">
@@ -24,7 +22,7 @@
             <!-- Ícono de editar -->
             <a href="#" class="text-primary me-2"><i class="bi bi-pencil"></i></a>
             <div class="d-flex flex-column">
-                <button class="btn btn-primary mb-2">Editar</button>
+            <a href="/admin/habitaciones" class="btn btn-primary mb-2">Editar</a>
                 <button class="btn btn-danger">Eliminar</button>
             </div>
         </div>

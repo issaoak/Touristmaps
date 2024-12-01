@@ -74,22 +74,17 @@
             <p class="welcome-text">Turista sin Maps</p>
         </div>
         <div class="navbar-right">
-            @if (Auth::check())
-                @if (Auth::user()->role === 'admin')
-                    <a href="{{ route('admin.dashboard') }}">
-                        <img src="{{ asset('images/Perfil.jpg') }}" alt="Perfil Admin">
-                    </a>
-                @else
-                    <a href="{{ route('perfil.mostrar') }}">
-                        <img src="{{ asset('images/Perfil.jpg') }}" alt="Perfil Usuario">
-                    </a>
-                @endif
-            @else
-                <a href="{{ route('iniciar_sesion') }}" class="btn btn-outline-dark">Iniciar Sesión / Registrarse</a>
-            @endif
+            <a href="{{ route('admin.dashboard') }}">
+                <img src="{{ asset('images/Perfil.jpg') }}" alt="Perfil Admin">
+            </a>
+            <a href="{{ route('perfil') }}">
+                <img src="{{ asset('images/Perfil.jpg') }}" alt="Perfil Usuario">
+            </a>
             <a href="{{ route('carrito') }}">
                 <img src="{{ asset('images/Carrito.png') }}" alt="Carrito" class="cart-icon">
             </a>
+            </a>
+            <a href="{{ route('iniciar_sesion') }}" class="btn btn-outline-dark">Iniciar Sesión / Registrarse</a>
         </div>
     </div>
 

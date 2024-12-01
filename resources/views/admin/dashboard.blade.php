@@ -41,7 +41,6 @@
         <a href="{{ route('admin.usuarios') }}" class="admin-button">Gestionar Usuarios</a>
         <a href="{{ route('admin.vuelos') }}" class="admin-button">Editar Vuelos</a>
         <a href="{{ route('admin.hoteles') }}" class="admin-button">Editar Hoteles</a>
-        <a href="{{ route('admin.habitaciones') }}" class="admin-button">Editar Habitacion</a>
 
 
         <form action="{{ route('logout') }}" method="POST" class="logout-form" style="margin-top: 20px;">
