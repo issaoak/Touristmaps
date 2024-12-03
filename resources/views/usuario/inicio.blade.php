@@ -1,4 +1,4 @@
-@extends('layouts.plantilla')
+@extends('layouts.plantillag')
 
 @section('titulo', 'Inicio - Turista sin Maps')
 

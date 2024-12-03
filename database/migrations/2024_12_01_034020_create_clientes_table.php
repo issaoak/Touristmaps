@@ -11,24 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // Tabla clientes
-        Schema::create('clientes', function (Blueprint $table) {
+        // Tabla usuarios
+        Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 150);
             $table->string('apellido', 150);
             $table->string('telefono', 20);
             $table->string('correo', 255)->unique();
             $table->string('contrasena', 255);
+            $table->enum('role', ['usuario', 'administrador'])->default('usuario'); // Rol del usuario
             $table->timestamp('fecha_registro')->useCurrent();
-            $table->timestamps();
-        });
-
-        // Tabla administrador
-        Schema::create('administrador', function (Blueprint $table) {
-            $table->id();
-            $table->string('nombre', 150);
-            $table->string('correo', 255)->unique();
-            $table->string('contrasena', 255);
             $table->timestamps();
         });
 
@@ -37,8 +29,6 @@ return new class extends Migration
             $table->id();
             $table->string('nombre', 150);
             $table->text('descripcion');
-            $table->text('actividades');
-            $table->string('fotos')->nullable();
             $table->timestamps();
         });
 
@@ -91,7 +81,7 @@ return new class extends Migration
             $table->date('fecha');
             $table->string('estado', 50);
             $table->integer('personas');
-            $table->foreignId('id_cliente')->constrained('clientes')->onDelete('cascade');
+            $table->foreignId('id_cliente')->constrained('usuarios')->onDelete('cascade'); // Ajuste: `clientes` ahora es `usuarios`
             $table->timestamps();
         });
 
@@ -119,7 +109,6 @@ return new class extends Migration
         Schema::dropIfExists('vuelos');
         Schema::dropIfExists('tipo_vuelo');
         Schema::dropIfExists('destinos');
-        Schema::dropIfExists('administrador');
-        Schema::dropIfExists('clientes');
+        Schema::dropIfExists('usuarios'); // Ajuste: tabla `usuarios` en lugar de `clientes`
     }
 };
